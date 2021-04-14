@@ -1,4 +1,4 @@
-package mentory.spring;
+package mentory.spring.basic;
 
 public interface SortAlgorithm {
 

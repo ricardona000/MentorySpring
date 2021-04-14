@@ -1,4 +1,4 @@
-package mentory.spring;
+package mentory.spring.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

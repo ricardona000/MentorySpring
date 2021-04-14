@@ -1,5 +1,6 @@
-package mentory.spring.scope;
+package mentory.spring;
 
+import mentory.spring.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

@@ -20,13 +20,16 @@ public class Application {
 		System.out.println("Result = " + result);*/
 
 		// Application Context
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Application.class);
-		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
-		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
-		System.out.println("BinarySearch: " + binarySearch);
-		System.out.println("BinarySearch1: " + binarySearch1);
-		int result = binarySearch.binarySearch(new int[] {12, 4, 6}, 3);
-		System.out.println("Result = " + result);
+        try (AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Application.class)) {
+            BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+            BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+            System.out.println("BinarySearch: " + binarySearch);
+            System.out.println("BinarySearch1: " + binarySearch1);
+            int result = binarySearch.binarySearch(new int[] {12, 4, 6}, 3);
+            System.out.println("Result = " + result);
+        }
+
+		//applicationContext.close();
 	}
 
 }

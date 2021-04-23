@@ -3,18 +3,22 @@ package mentory.spring;
 import mentory.spring.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+//@SpringBootApplication
+@Configuration
 public class ScopeApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(ScopeApplication.class);
 
 	public static void main(String[] args) {
 		// Application Context
-		ApplicationContext applicationContext = SpringApplication.run(ScopeApplication.class, args);
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ScopeApplication.class);
+		//ApplicationContext applicationContext = SpringApplication.run(ScopeApplication.class, args);
 		PersonDAO personDao1 = applicationContext.getBean(PersonDAO.class);
 		PersonDAO personDao2 = applicationContext.getBean(PersonDAO.class);
 		LOGGER.info("personDao1: {}", personDao1);

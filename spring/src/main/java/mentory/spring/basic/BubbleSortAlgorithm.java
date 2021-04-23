@@ -1,9 +1,9 @@
 package mentory.spring.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 @Qualifier("bubbleSort")
 public class BubbleSortAlgorithm implements SortAlgorithm {
 

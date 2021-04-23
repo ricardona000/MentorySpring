@@ -1,7 +1,6 @@
 package mentory.spring;
 
 import mentory.spring.basic.BinarySearchImpl;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

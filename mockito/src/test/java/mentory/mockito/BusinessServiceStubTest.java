@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BusinessServiceTest {
+public class BusinessServiceStubTest {
 
     @Test
     public void testFindGreatestFromAllData() {
         BusinessService businessService = new BusinessService(new DataServiceStub());
+
         int result = businessService.findGreatestFromAllData();
+
         assertEquals(24, result);
     }
 
